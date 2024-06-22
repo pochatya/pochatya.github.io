@@ -1,7 +1,6 @@
-var CACHE_NAME = 'report-caches';
+var CACHE_NAME = 'pwa-caches';
 var urlsToCache = [
     'zui331.github.io/index.html',
-    'sanko.smarky.jp/#/student_site/sheet_list',
 ];
 
 self.addEventListener('install', function(event) {
