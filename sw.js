@@ -1,7 +1,7 @@
 var CACHE_NAME = 'report-caches';
 var urlsToCache = [
-    'index.html',
-    'https://sanko.smarky.jp/#/student_site/sheet_list',
+    'zui331.github.io/index.html',
+    'sanko.smarky.jp/#/student_site/sheet_list',
 ];
 
 self.addEventListener('install', function(event) {
