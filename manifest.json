@@ -1,8 +1,10 @@
 {
   "short_name": "デジレポ",
   "name": "デジタルレポートシステム",
-  "display": "standalone",
+  "display": "fullscreen",
   "start_url": "index.html",
+  "background_color":"#FFFFFF",
+  "theme_color":"#A2FFA2",
   "icons": [
     {
       "src": "icon.png",
