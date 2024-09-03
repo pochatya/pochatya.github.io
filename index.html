@@ -1,17 +1,19 @@
 <html>
   <head>
-    <title>デジタルレポートシステム</title>
+    <title>テスト</title>
     <meta charset="UTF-8">
-    <link rel="icon" href="icon.ico">
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icon.png">
+    <script>
+      var var1 = 0;
+      function SuperMan (number1) {
+        var1 = Math.floor(Math.random * number1) + 1;
+        getElementById("result").innerHTML = "<font color=\"red\">" + var1.toString + "</font>";
+      };
+    </script>
   </head>
   <body>
-    <div class="link">
-      <img src="icon.png" width="64px" height="64px">
-      <a href="https://sanko.smarky.jp/#/student_site/sheet_list" style="font-weight:bold; font-size:64px; color:#FF0000; background-color:#a2ffa2;">ここをクリック</a>
-      <img src="icon.png" width="64px" height="64px">
-    </div>
+    <h1>賽の目</h1>
+    <button onclick="SuperMan(6);">Click me!!</button>
+    <div id="result">--</div>
   </body>
 </html>
