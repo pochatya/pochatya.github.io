@@ -5,17 +5,15 @@
     <link rel="icon" href="icon.png">
     <script>
       var var1 = 0;
+      function SuperMan (number1) {
+        var1 = Math.floor(Math.random * number1) + 1;
+        getElementById("AAA").innerHTML = "<font color=\"red\">" + var1.toString + "</font>";
+      };
     </script>
   </head>
   <body>
     <h1>賽の目</h1>
     <button onclick="SuperMan(6);">Click me!!</button>
-    <div id="result">--</div>
-    <script>
-      function SuperMan (number1) {
-        var1 = Math.floor(Math.random * number1) + 1;
-        getElementById("result").innerHTML = "<font color=\"red\">" + var1.toString + "</font>";
-      };
-    </script>
+    <div id="AAA">--</div>
   </body>
 </html>
