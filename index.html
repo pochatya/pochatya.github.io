@@ -6,7 +6,7 @@
     <script>
       var var1 = 0;
       function SuperMan(num1) {
-        var1 = Math.floor(Math.random * Number(num1)) + 1;
+        var1 = Math.floor(Math.random() * Number(num1)) + 1;
         document.getElementById("AAA").innerHTML = "<font color=\"red\"><b>" + var1.toString() + "</b></font>";
         if(var1 == 6){
           alert("Jackpot!!");
