@@ -5,8 +5,8 @@
     <link rel="icon" href="icon.png">
     <script>
       var var1 = 0;
-      function SuperMan (number1) {
-        var1 = Math.floor(Math.random * number1) + 1;
+      function SuperMan(num1) {
+        var1 = Math.floor(Math.random * Number(num1)) + 1;
         document.getElementById("AAA").innerHTML = "<font color=\"red\"><b>" + var1.toString() + "</b></font>";
         if(var1 == 6){
           alert("Jackpot!!");
@@ -16,7 +16,8 @@
   </head>
   <body>
     <h1>賽の目</h1>
-    <button onclick="SuperMan(6);">Click me!!</button>
+    <label for="input1">最大値<input id="input1" type="number" value="6" min="1" max="2147483647"></label>
+    <button onclick="SuperMan(document.getElementById('input1').value);">Click me!!</button>
     <div id="AAA">--</div>
   </body>
 </html>
