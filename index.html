@@ -1,23 +1,36 @@
 <html>
   <head>
-    <title>テスト</title>
+    <title>The test page</title>
     <meta charset="UTF-8">
     <link rel="icon" href="icon.png">
     <script>
       var var1 = 0;
       function SuperMan(num1) {
         var1 = Math.floor(Math.random() * Number(num1)) + 1;
-        document.getElementById("AAA").innerHTML = "<font color=\"red\"><b>" + var1.toString() + "</b></font>";
-        if(var1 == 6){
-          alert("Jackpot!!");
+        document.getElementById("AAA").innerHTML = "<b>" + var1.toString() + "</b>";
+        if(var1 == num1){
+          alert("Great!!");
         }
       };
     </script>
+    <style>
+      a {
+        text-decoration:none;
+        color:black;
+      }
+      body {
+        background-color:#4C97FF;
+        text-align:center;
+      }
+      #AAA {
+        color:#D80000;
+      }
+    </style>
   </head>
   <body>
-    <h1>賽の目</h1>
-    <label for="input1">最大値<input id="input1" type="number" value="6" min="1" max="2147483647"></label>
+    <h1><a href="DotWriter.html">Dice Simulator</a></h1>
+    <label for="input1">Max Value<input id="input1" type="number" value="6" min="1" max="2147483647"></label>
     <button onclick="SuperMan(document.getElementById('input1').value);">Click me!!</button>
-    <div id="AAA">--</div>
+    <div id="AAA">-</div>
   </body>
 </html>
