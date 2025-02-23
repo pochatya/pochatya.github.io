@@ -1,0 +1,72 @@
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>ぽちゃ茶のサイト | 自作アプリ一覧</title>
+    <link rel="icon" href="icon.ico">
+    <link rel="apple-touch-icon" href="icon.ico">
+    <script>
+      const applists = [
+        'suika',
+        'homerun',
+        'dotwriter'
+      ];
+      const appname = [
+        'ヌイカゲーム',
+        'ホームランダービー',
+        'ドット絵メーカー'
+      ];
+      const appdesc = [
+        'ベータ',
+        'Puniki for mobile(Beta!!)',
+        '適当'
+      ];
+    </script>
+    <style>
+      @font-face {
+        font-family: 'Nyashi';
+        src: url('font/Nyashi.ttf') format('truetype')
+      }
+      * {
+        margin:0px;
+        padding:0px;
+        font-family: 'Nyashi', 'HG創英角ﾎﾟｯﾌﾟ体', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      body{
+        text-align: center;
+      }
+      #apps {
+        width:100%;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        text-align: left;
+      }
+      #apps div {
+        background-color:#a2ffa2;
+        display:flex;
+        width:400px;
+        height:160px;
+        border-radius:20px;
+        align-items:center;
+        flex-shrink:0;
+        margin:5px;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe src="header.html" width="100%" height="53px" frameborder="0"></iframe>
+    <h1>自作アプリ一覧</h1>
+    <p>今後も増えるかも？</p>
+    <div id="apps">
+    </div>
+    <script>
+      for(i2 = 0; i2<10;i2++){
+        for (i = 0; i < applists.length; i++) {
+          var kari = `<div id="app_${applists[i]}" onclick="window.location.href='apps/${applists[i]}/index.html';">`;
+          kari += `<img src="apps/${applists[i]}/icon.png" width="80" height="80" alt="image" style="margin:10px;"><span><h1>${appname[i]}</h1><p>${appdesc[i]}<p></span></div>`;
+        document.getElementById('apps').innerHTML += kari;
+        }
+      }
+    </script>
+  </body>
+</html>
