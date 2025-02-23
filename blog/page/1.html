@@ -1,0 +1,48 @@
+<html lang="ja">
+  <head>
+    <title>ぽちゃ茶のサイト | ブログ</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../../icon.ico">
+    <link rel="apple-touch-icon" href="../../icon.ico">
+    <link rel="stylesheet" href="../../base.css">
+    <style>
+      @font-face {
+        font-family: 'Nyashi';
+        src: url('../../font/Nyashi.ttf') format('truetype')
+      }
+      #data {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe src="../../header.html" width="100%" height="53px" frameborder="0"></iframe>
+    <h1 id="title">ダミータイトル</h1>
+    <span id="data"><p><a href="../index.html">←ブログ一覧へ戻る</a></p><script src="../information.js"></script></span>
+    <p>マイクラ統合版のScriptAPIで重要だけど忘れがちなことを書き留めておきます</p>
+    <h2>getItemとgetSlotの違い</h2>
+    <p>getItem、getSlotとは、エンティティとブロックのInventoryコンポーネントのContainer Classにある、</p>
+    <p>特定の番号のスロットにあるアイテムを取得できるメソッドです。</p>
+    <p>どちらもアイテムの情報を取得することができますが実は仕様が違います</p>
+    <p>getItemはアイテムのデータをそのまま返します</p>
+    <p>参照したアイテムのデータを渡しているだけなので、</p>
+    <p>プロパティを書き換えたり、メソッドを実行しても元のアイテムに影響はありません。</p>
+    <p>対してgetSlotはアイテムへの参照を返します</p>
+    <p>なので、個数を変更したりsetLoreを実行することができます</p>
+    <br>
+    <p>ごっちゃになりがちなので注意しましょう</p>
+    <h2>ProjectileHitEntityAfterEvent</h2>
+    <p>このイベントは飛び道具が当たった時にイベントを実行できますが、</p>
+    <p>飛び道具の情報をほとんど取得できません（既に命中して消滅しているため）</p>
+    <p>カスタムエンティティなら"destroy_on_hit"をfalseにしておくと</p>
+    <p>当たっても消えないので情報を取得することができます。</p>
+    <p>その代わり、イベント実行後Entity.remove()で飛び道具を削除するのを忘れないようにしましょう</p>
+    <h2>クリエキル</h2>
+    <p>エンティティのhealthコンポーネントで</p>
+    <p>setCurrentValue()メソッドで値を0にすると</p>
+    <p>クリエイティブのプレイヤーもキルできます</p>
+    <h2>おわり</h2>
+    <p>そのうちAPIのリファレンスを翻訳してこのサイトに載せようかと思っています</p>
+    <p>飽きなければ定期的に更新すると思うのでよろしくお願いします</p>
+  </body>
