@@ -20,7 +20,7 @@ h1 {
   border-bottom: 4px dotted #C9EFFF;
   font-size: 48px;
   color:#FF85FF;
-  display: block;
+  display: inline-block;
 }
 h2 {
   margin-top: 40px;
@@ -31,7 +31,7 @@ h2 {
   border-bottom: 3px dotted #FFBDFF;
   font-size: 32px;
   color:#85C2FF;
-  display: block;
+  display: inline-block;
 } 
 p {
   text-align: left;
@@ -47,4 +47,7 @@ a {
 }
 a:hover {
   color: #4C97FF
+}
+a:visited {
+  color: #404040;
 }
