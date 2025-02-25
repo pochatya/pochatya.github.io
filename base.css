@@ -9,7 +9,7 @@ body {
   padding: 0px;
   background:linear-gradient(to bottom right, #FFBDFF, #FDFF96);
   text-align:center;
-  justify-content: center;
+  display: block;
 }
 h1 {
   margin-top: 10px;
@@ -20,6 +20,7 @@ h1 {
   border-bottom: 4px dotted #C9EFFF;
   font-size: 48px;
   color:#FF85FF;
+  display: inline-block;
 }
 h2 {
   margin-top: 40px;
