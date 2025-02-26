@@ -46,6 +46,7 @@
         color:#606060;
       }
       #title {
+        display: inline-block;
         margin-top: 10px;
         background-color: white;
         justify-self: center;
@@ -75,9 +76,6 @@
       #apps div:hover{
         background-color: #5CE95C;
       }
-      #apps div:active{
-        background-color: #167c16;
-      }
     </style>
   </head>
   <body>
@@ -89,7 +87,7 @@
     </div>
     <script>
       for (i = 0; i < applists.length; i++) {
-        var kari = `<div id="app_${applists[i]}" ondblclick="window.location.href='apps/${applists[i]}/index.html';">`;
+        var kari = `<div id="app_${applists[i]}" onclick="window.location.href='apps/${applists[i]}/index.html';">`;
         kari += `<img src="apps/${applists[i]}/icon.png" width="80" height="80" alt="image" style="margin:10px;"><span><h1>${appname[i]}</h1><p>${appdesc[i]}<p></span></div>`;
         document.getElementById('apps').innerHTML += kari;
       }
