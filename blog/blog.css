@@ -1,5 +1,6 @@
 .blogBlock {
   display: inline-block;
+  box-sizing: border-box;
   margin: 20px;
   padding: 10px;
   width: 600px;
