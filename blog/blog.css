@@ -1,7 +1,8 @@
 #blog {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-self: center;
+  align-items: center;
 }
 
 .blogBlock {
