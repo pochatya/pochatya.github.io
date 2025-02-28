@@ -1,3 +1,9 @@
+#blog {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
 .blogBlock {
   display: inline-block;
   box-sizing: border-box;

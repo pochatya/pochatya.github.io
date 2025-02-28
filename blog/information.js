@@ -15,6 +15,13 @@ const data = [
       '備忘録',
       'Minecraft'
     ]
+  },
+  {
+    data:'2025-02-28',
+    title: 'バイトまた落ちた',
+    tags : [
+      '日記'
+    ]
   }
 ]
 let allTags = [];
@@ -59,7 +66,7 @@ function blogList () {
   }
 }
 
-if(path.length >= 2 && path[path.length-1] == 'index.html' && path[path.length-2] == 'blog'){
+if(path.length >= 2 && (path[path.length-1] == 'index.html' || path[path.length-1] == '') && path[path.length-2] == 'blog'){
   blogList();
 }else {
   blogPage();
