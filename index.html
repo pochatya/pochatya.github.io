@@ -10,7 +10,7 @@
     <style>
       @font-face {
         font-family: 'Nyashi';
-        src: url('font/Nyashi.ttf') format('truetype')
+        src: url('fonts/Nyashi.ttf') format('truetype')
       }
       #aboutSite {
         margin-bottom: 100px;
@@ -24,10 +24,18 @@
       #myFavChar {
         margin-bottom: 100px;
       }
+      #youkosoImg {
+        width: 40%;
+        height: auto;
+      }
     </style>
   </head>
   <body>
-    <iframe src="header.html" width="100%" height="53px" frameborder="0"></iframe>
+    <iframe src="header.html" width="100%" height="53px" frameborder="0" scrolling="no"></iframe>
+    <div id="youkoso">
+      <img src="images/supiki_modoki.png" id="youkosoImg">
+      <p style="text-align: center; font-size: 60px;">ぽちゃ茶のサイトへようこそ！！</p>
+    </div>
     <div id="aboutSite">
       <h1>このサイトについて</h1>
       <p>ぽちゃ茶がプログラミングの勉強で作った小物置き場的なサイトです</p>
@@ -75,6 +83,7 @@
       <p><a href="https://minecraft-mcworld.com/author/55419d23da200df603072be3b8b793fc531c22a8/" target="_blank" rel="noopener">クラフターズコロニー</a></p>
     </div>
     <footer>
+      <span id="Copyright">© 2025 ぽちゃ茶</span>
     </footer>
   </body>
 </html>

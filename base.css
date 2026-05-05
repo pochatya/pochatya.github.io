@@ -13,6 +13,7 @@ body {
 }
 h1 {
   margin-top: 10px;
+  padding: 12px;
   background-color: white;
   justify-self: center;
   width: 80%;
@@ -24,6 +25,7 @@ h1 {
 }
 h2 {
   margin-top: 40px;
+  padding: 4px;
   background-color: white;
   justify-self: center;
   width: 40%;
@@ -40,14 +42,24 @@ p {
   margin-left: 15%;
   margin-right: 15%;
   font-size: 24px;
-  color:#606060;
+  color:#6F6F6F;
 }
 a {
-  color: #85C2FF;
+  color: #4C97FF;
 }
 a:hover {
-  color: #4C97FF
+  color: #395dbe
 }
 a:visited {
-  color: #404040;
+  color: #3f3f3f;
+}
+footer {
+  background-color: #3abdd4;
+  height: 120px;
+  align-content: end;
+  padding-bottom: 6px;
+}
+#Copyright {
+  font-size: 24px;
+  color: #f0f0f0;
 }

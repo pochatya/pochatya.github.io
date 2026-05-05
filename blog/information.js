@@ -1,3 +1,8 @@
+let params = new URLSearchParams(document.location.search);
+let search = {
+  tag : params.get("tag"),
+  text : params.get("value"),
+};
 
 const data = [
   {
@@ -57,12 +62,28 @@ function blogList () {
   for(let r = 0; r < allTags.length; r++){
     window.document.getElementById('selector').innerHTML += `<option value="${r+1}">${allTags[r]}</option>`;
   }
+  if(search.tag != null && search.tag != "" && search.tag != "undefined"){
+    var tagsearch = true;
+    console.log('タグ検索する')
+  }else {
+    var tagsearch = false;
+    console.log('タグ検索しない')
+  }
+  if(search.text != null && search.text != ""){
+    var textsearch = true;
+    console.log('文字検索する')
+  }else {
+    var textsearch = false;
+    console.log('文字検索しない')
+  }
   for(let i = 0; i < data.length; i++){
-    var block = `<div class="blogBlock" onclick="window.location.href='page/${i}.html'">`;
-    block += `<h1>${data[i].title}</h1>`;
-    block += `<p>作成日：${data[i].data}</p>`;
-    block += `<p>タグ：${data[i].tags.toString()}</p></div>`
-    window.document.getElementById('blog').innerHTML = block + window.document.getElementById('blog').innerHTML;
+    if( (!tagsearch && !textsearch) || ((tagsearch&&data[i].tags.includes(search.tag))||(textsearch&&~data[i].title.toLowerCase().indexOf(search.text.toLowerCase()))) ){
+      var block = `<div class="blogBlock" onclick="window.location.href='page/${i}.html'">`;
+      block += `<h1>${data[i].title}</h1>`;
+      block += `<p>作成日：${data[i].data}</p>`;
+      block += `<p>タグ：${data[i].tags.toString()}</p></div>`
+      window.document.getElementById('blog').innerHTML = block + window.document.getElementById('blog').innerHTML;
+    }
   }
 }
 

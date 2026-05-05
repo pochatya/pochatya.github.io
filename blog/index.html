@@ -9,7 +9,7 @@
     <style>
       @font-face {
         font-family: 'Nyashi';
-        src: url('../font/Nyashi.ttf') format('truetype')
+        src: url('../fonts/Nyashi.ttf') format('truetype')
       }
       #search {
         justify-self: center;
@@ -18,7 +18,7 @@
         width: 100px;
         height: 32px;
         font-size: 18px;
-        color: #606060;
+        color: #6f6f6f;
         background-color: #FFFFFF;
         border-radius: 16px;
         border:none;
@@ -27,7 +27,7 @@
       #search select:hover{
         background-color: #F0F0F0;
       }
-      #search input {
+      #submit {
         width: 64px;
         height: 32px;
         font-size: 18px;
@@ -36,20 +36,36 @@
         background-color: #FFBDFF;
         cursor: pointer;
       }
-      #search input:active {
+      #submit:active {
         background-color: #FF85FF;
+      }
+      #text{
+        width: 384px;
+        height: 32px;
+        font-size: 18px;
+        padding-left: 8px;
+        border-radius: 16px;
+        border: none;
+        background-color: white;
+        border: 1px;
+        border-style: solid;
+        border-color: #3f3f3f;
+        cursor: text;
       }
     </style>
   </head>
   <body>
-    <iframe src="../header.html" width="100%" height="53px" frameborder="0"></iframe>
+    <iframe src="../header.html" width="100%" height="53px" frameborder="0" scrolling="no"></iframe>
     <h1>ブログ記事一覧</h1>
     <p id="search">
-      <label for="selector">タグで絞り込み</label>
+      <label for="selector">タグで検索</label>
       <select name="sel_tags" id="selector">
-        <option value="">選択…</option>
+        <option value="0">選択…</option>
       </select>
-      <input type="submit">
+      <label for="text">ブログタイトルで検索</label>
+      <input type="text" name="txt_box" id="text">
+      </input>
+      <input type="submit" id="submit" value="検索" onclick="if(window.document.getElementById('selector').value == 0 && window.document.getElementById('text').value == ''){return;}else{window.location.href = `./index.html?tag=${allTags[window.document.getElementById('selector').value-1]}&value=${window.document.getElementById('text').value}`};">
     </p>
     <div id="blog"></div>
     <script src="information.js"></script>
